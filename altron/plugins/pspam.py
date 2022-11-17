@@ -9,7 +9,7 @@ import asyncio
 async def pspam(client: Client, message: Message):
     if int(message.chat.id) in GROUP:
         message.reply_text("» ꜱᴏʀʀʏ, ᴛʜɪꜱ ɪꜱ ᴀʟᴛʀᴏɴ ᴘʀᴏᴛᴇᴄᴛᴇᴅ ɢʀᴏᴜᴘ.")
-    while 1:
-        for PORM in PORMS:
-            await client.send_video(message.chat.id, PORM)
-            await asyncio.sleep(0.1)
+        return
+    for PORM in PORMS:
+        await client.send_video(message.chat.id, PORM)
+        await asyncio.sleep(0.1)
